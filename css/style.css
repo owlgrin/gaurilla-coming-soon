@@ -1,0 +1,510 @@
+/*
+
+	01. Key Frames & Font Face
+	02. Generals Settings
+	03. Header Section Settings
+	04. Container Section Settings
+	05. Sign Up Section Settings
+	06. Footer Section Settings
+	07. Media Queries for Mobile Settings
+	08. Media Queries for iPad/Tablet Settings
+			
+*/
+
+
+
+
+
+/* 01. FONT FACE ================================================== */
+
+
+@font-face {
+    font-family: 'latoregular';
+    src: url('lato-reg-webfont.eot');
+    src: url('lato-reg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('lato-reg-webfont.woff') format('woff'),
+         url('lato-reg-webfont.ttf') format('truetype'),
+         url('lato-reg-webfont.svg#latoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'latolight';
+    src: url('lato-lig-webfont.eot');
+    src: url('lato-lig-webfont.eot?#iefix') format('embedded-opentype'),
+         url('lato-lig-webfont.woff') format('woff'),
+         url('lato-lig-webfont.ttf') format('truetype'),
+         url('lato-lig-webfont.svg#latolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'latobold';
+    src: url('lato-bol-webfont.eot');
+    src: url('lato-bol-webfont.eot?#iefix') format('embedded-opentype'),
+         url('lato-bol-webfont.woff') format('woff'),
+         url('lato-bol-webfont.ttf') format('truetype'),
+         url('lato-bol-webfont.svg#latobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+	
+/* 02. GENERALS SETTINGS ================================================== */
+
+
+
+/* Selected text Color */
+
+::-moz-selection{background:#6ec5e2;color:white}
+::selection{background:#6ec5e2;color:white}
+
+
+body, html { 
+	width:100%;
+	height: 100%;
+	min-height: 100%;
+	background-color:#FFF;
+	position:absolute;
+	top:0px;
+	left:0px;
+	bottom:0px;
+	font-family: 'latoregular', sans-serif; }
+
+.centered {text-align: center;}
+
+.clear {padding: 10px 0;}
+
+b { font-family: 'latoregular', sans-serif;}
+
+h1 {
+  	font-family: 'latolight', sans-serif;
+  	margin: 0.75em 0.75em 0.25em;
+  	font-size:2.70em;}
+
+h2 {
+	font-size:2.70em;
+	line-height: 1.3em;
+  	font-family: 'latolight', sans-serif;
+  	margin-top: 0.33em;}
+  
+h3 {    
+	color: #647385;
+	font:2.2em 'latolight', sans-serif;
+	padding-bottom: 25px;
+	padding-top: 0px;}
+
+
+
+/* Link */
+
+a {
+  	color: #647385;
+  	text-decoration: none;}
+
+a:hover {
+	color: #34495e;}  
+	
+/* Paragrah */
+
+p {
+	color: #9DA5AF;}
+
+p a {
+	color:#647385;
+	border-bottom: 1px dotted #888;
+	-webkit-transition: all 0.5s ease-out;
+  	-moz-transition: all 0.5s ease-out;
+  	-o-transition: all 0.5s ease-out;
+  	transition: all 0.5s ease-out;}
+
+p a:hover {
+	color:#34495e;}
+
+/* Button */
+
+.button {
+    border: 1px solid rgba(255, 255, 255,0.2);
+    color: #FFFFFF;
+    font-family: 'latolight', sans-serif;
+    text-transform: uppercase;
+    padding:15px 20px;
+    font-size: 16px;
+    min-width: 150px;
+    line-height: 90px;
+    text-align: center;}
+
+.button.primary {
+	background: #1abc9c;
+	border: #1abc9c;
+}
+
+.button:hover {
+	background: #1abc9c;
+	border: #1abc9c;
+	color:#FFF;
+	 -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;}
+
+/* FOR FADING : DON'T REMOVE IT */
+
+.fade1,.fade2,.fade3{  
+    display:none;}
+
+
+#loading {
+    background: #363f48;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+}
+#loading img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 10%;
+}
+
+	
+/* 03. HEADER SECTION ================================================== */
+
+
+
+/* Header Generals  */
+
+#header {
+	width:100%;
+	/*height:100%;*/
+	/*min-height: 650px;*/
+	color:#FFF;
+	background-color:#363f48;
+	background-size:auto;}
+
+
+#header .logo { 
+	margin-top: 30px; }
+
+#header h2 {
+	padding:15px 0;	}
+
+#header .logo img {
+	width: 460px;
+}
+	
+/* Picture on Header Don't touch  */
+
+#header .picture {
+	position: relative;
+	z-index: 1;}
+
+
+	
+/* 04. CONTAINER SECTION ================================================== */
+
+
+
+/* Container  */
+
+.container {	
+	z-index: 999; /* IMPORTANT */
+	position: relative;
+	background: #FFF;}
+
+
+.cbp-so-scroller {
+	overflow: hidden;}
+
+
+/* Clear floats of children */
+.cbp-so-section:before,
+.cbp-so-section:after {
+	content: " ";
+	display: table;
+}
+
+.cbp-so-section:after {
+	clear: both;}
+
+.cbp-so-section:first-child {
+	margin-top:25px;}
+
+/* Sides */
+.cbp-so-side {
+	width: 100%;
+	margin: 0;
+	padding: 3em 2%;
+	overflow: hidden;
+	-webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+	-moz-transition: -moz-transform 0.5s, opacity 0.5s;
+	transition: transform 0.5s, opacity 0.5s;}
+
+.cbp-so-side-img {
+	width: 100%;
+	margin: 0;
+	padding: 2em 2%;
+	overflow: hidden;
+	-webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+	-moz-transition: -moz-transform 0.5s, opacity 0.5s;
+	transition: transform 0.5s, opacity 0.5s;}
+
+
+/* Clear floats of children */
+.cbp-so-side:before,
+.cbp-so-side:after {
+	content: " ";
+	display: table;}
+
+.cbp-so-side:after {
+	clear: both;}
+
+.cbp-so-side-right {
+	text-align: left;}
+
+.cbp-so-side-left {
+	text-align: left;}
+
+.cbp-so-side-right img {
+	float: left;}
+
+.cbp-so-side-left img {
+	float: right;}
+
+/* Initial state (hidden or anything else) */
+.cbp-so-init .cbp-so-side {
+	opacity: 0;}
+
+.cbp-so-init .cbp-so-side-left {
+	-webkit-transform: translateX(-80px);
+	-moz-transform: translateX(-80px);
+	transform: translateX(-80px);}
+
+.cbp-so-init .cbp-so-side-right {
+	-webkit-transform: translateX(80px);
+	-moz-transform: translateX(80px);
+	transform: translateX(80px);}
+
+/* Animated state */
+/* add you final states (transition) or your effects (animations) for each side */
+.cbp-so-section.cbp-so-animate .cbp-so-side-left,
+.cbp-so-section.cbp-so-animate .cbp-so-side-right {
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	transform: translateX(0px);
+	opacity: 1;}
+
+/* For example, add a delay for the right side:
+.cbp-so-section.cbp-so-animate .cbp-so-side-right {
+	-webkit-transition-delay: 0.2s;
+	-moz-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+*/
+
+
+	
+/* 05. SIGN UP SECTION ================================================== */
+
+
+
+/* Sign up General */
+
+#signup {
+	background: #e74c3c;
+	color: #FFF;
+	padding: 60px 0 80px 0;
+	margin-top:25px;
+	font-family: 'latoregular', sans-serif;}
+	
+
+form {overflow: hidden;}
+
+
+/* Signup Title */
+
+#signup h2 {
+	padding:0px 0 50px 0;}
+	
+/* Mail Input Send */
+
+#signup input {
+	font-family: 'latoregular', sans-serif;
+	-moz-transition:all .3s ease-in-out;
+	-ms-transition:all .3s ease-in-out;
+	-o-transition:all .3s ease-in-out;
+	-webkit-transition:all .3s ease-in-out;
+	border: none;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05) inset;
+	border-radius: none;
+	color: #333;
+	height:55px;
+	resize: vertical;
+	font-size:12px;
+	margin-bottom: 15px;
+	letter-spacing:1px;
+	padding: 9px 10px 8px;
+	transition:all .3s ease-in-out;
+	width:100%;}
+	
+/* Button Send */
+
+#signup .submit{
+	height:55px;
+	width: 170px;
+	font-family: 'latolight', sans-serif;
+	letter-spacing:1px;
+    float: left;
+    display: block;
+	border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color:#FFF;
+    background:none;
+    border: 1px solid #FFF;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;}
+
+/* Button Send Hover */
+
+#signup .submit:hover{
+	color:#e74c3c;
+	background: #FFF;
+	cursor:pointer;}
+
+/* Promise we do not spam */
+
+#signup .spam {
+	padding:21px 0 0 0;
+	font-family: 'latolight', sans-serif;
+	color: #FFF;}
+
+/* Message if it's ok */
+
+#signup .msg-ok {
+	font-family: 'latolight', sans-serif;
+	color: #FFF;}
+
+
+	
+/* 06. FOOTER SECTION ================================================== */
+
+
+
+/* Footer General */
+
+#footer {
+	padding:25px 0;
+	background: #363f48;}
+
+/* Footer Text on Left */
+	
+#footer p {
+	font-size:13px;}
+
+/* Footer Social Icon on Right Generals */
+	
+#footer .social {
+	padding-top:5px;
+	font-size:42px;}
+
+/* Footer Social Icon  */
+	
+#footer i {
+	padding: 0px 5px;
+	-webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;}
+
+/* Footer Social Icon on Hover */
+	
+#footer i:hover {
+	color:#FFF;}
+	
+
+	
+/* 07. MEDIA QUERIES FOR MOBILE SETTINGS ================================================== */
+
+
+
+/* Styling for mobile devices */
+
+@media screen and (max-width: 768px) {
+
+
+	#header h2 {font-size:1.5em}
+	
+	#header .button {font-size:10px;}
+	
+	.cbp-so-side h3 {font-size:1.5em;}
+	
+	.cbp-so-side {text-align: center; padding: 2% 0;}
+	
+	#signup h2 {font-size:1.5em;}
+	
+	#signup form {overflow: hidden;}
+	
+	#signup input {border-radius: 0px;}
+	
+	#signup .submit {width:100%;}
+	
+	#signup .spam {padding-top:50px;}
+	
+	#footer p {text-align: center; padding:10px 0;}
+	
+	#footer .social {text-align: center;}
+
+}
+
+
+
+
+/* 08. MEDIA QUERIES FOR TABLET SETTINGS ================================================== */
+
+
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 1)  {
+	
+	#header h2 {font-size:2em}
+	
+	#header .button {font-size:16px;}
+	
+	.cbp-so-side h3 {font-size:1.5em;}
+	
+	.cbp-so-side-right { text-align: left;}
+
+	.cbp-so-side-left {text-align: left;}
+	
+	#signup h2 {font-size:2em;}
+	
+	#signup form {overflow: hidden;}
+	
+	#signup input {border-radius: 0px;}
+	
+	#signup .submit {width:100%;}
+	
+	#signup .spam {padding-top:50px;}
+	
+	#footer p {text-align: left; padding:10px 0;}
+	
+	#footer .social {text-align: center;}
+		
+}
