@@ -15,11 +15,9 @@ $( document ).ready(function() { // Document ready
 		$('.fade3').delay(900).fadeIn(1500);
 		
 		var flydown = function() {
-			console.log('downing');
 			$('#header .picture').animate({'top': 15}, 2500, flyup);
 		}
 		var flyup = function() {
-			console.log('uping');
 			$('#header .picture').animate({'top': -15}, 2500, flydown);
 		}
 		
@@ -57,8 +55,7 @@ $('#notify-button').click(function(e){
 	$('form').submit(function() {
 		
 		var form_data = $(this).serialize();
-
-		if (validateEmail($('input[name=email]').attr('value')))
+		if (validateEmail($('input[name=email]').val()))
 		{
 			
 			if (typeof ajax_form !== "undefined" && ajax_form === true)
