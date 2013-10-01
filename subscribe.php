@@ -4,7 +4,7 @@ include('classes/Mailchimp.class.php');
 $MailChimp = new MailChimp('558bbba10912d1979ea9fb9d733499e8-us7');
 
 $result = $MailChimp->call('lists/subscribe', array(
-	'id'				=> 'fbf3c86bd2',
+	'id'				=> 'f5a939683e',
     'email'             => array('email'=>$_POST['email']),
     'double_optin'      => false,
     'update_existing'   => true,
