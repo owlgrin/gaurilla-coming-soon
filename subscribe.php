@@ -1,6 +1,5 @@
 <?php
-ini_set('display_errors', 1);
-include('Mailchimp.class.php');
+include('classes/Mailchimp.class.php');
 
 $MailChimp = new MailChimp('558bbba10912d1979ea9fb9d733499e8-us7');
 
